@@ -1,0 +1,115 @@
+ /* Estilos para la nueva sección de cards */
+ .other-projects {
+    padding: 4rem 0;
+    background-color: #ffffff;
+}
+
+.other-projects-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.mini-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.mini-card-content {
+    padding: 1.5rem;
+}
+
+.mini-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--dark-color);
+}
+
+.mini-card-description {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.mini-card-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.mini-tag {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.project-mini-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-mini-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.project-link {
+    flex: 1;
+    padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.demo-link {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.demo-link:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.github-link {
+    background-color: #f1f5f9;
+    color: var(--dark-color);
+}
+
+.github-link:hover {
+    background-color: #e2e8f0;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,149 @@
+:root {
+    --color-primario: #1d60b5;
+    --color-secundario: #5194df;
+    --degradado-principal: linear-gradient(135deg, #193761 0%, #1d60b5 100%);
+    font-family: 'Inter', sans-serif;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+.deslizador-principal {
+    height: 80vh;
+    position: relative;
+    margin-top: 78px;
+}
+.diapositiva {
+    background: var(--degradado-principal);
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.contenido-diapositiva {
+    position: relative;
+    z-index: 2;
+}
+.imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    object-fit: cover;
+    z-index: 1;
+}
+.contenido-escritorio{
+    z-index: 15;
+}
+.efecto-blur {
+    backdrop-filter: blur(10px);
+    background-color: rgba(16, 34, 65, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+}
+.tarjeta-servicio {
+    background: rgba(25, 55, 97, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+}
+.tarjeta-servicio:hover {
+    transform: scale(1.05);
+    background-color: rgba(29, 96, 181, 0.7);
+}
+.navegacion-diapositiva {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(29, 96, 181, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.navegacion-diapositiva:hover {
+    background: rgba(29, 96, 181, 0.8);
+}
+.navegacion-diapositiva.anterior {
+    left: 20px;
+}
+.navegacion-diapositiva.siguiente {
+    right: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .deslizador-principal {
+        height: auto;
+        min-height: 80vh;
+    }
+    .efecto-blur {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contenido-escritorio {
+        display: none;
+    }
+    .contenido-diapositiva {
+        text-align: center;
+    }
+    .diapositiva .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .tarjeta-servicio {
+        margin-bottom: 20px;
+    }
+    .btn-grupo {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .efecto-blur {
+        padding: 15px;
+    }
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .navegacion-diapositiva {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tarjeta-servicio {
+        padding: 15px;
+    }
+    .display-4 {
+        font-size: 2rem;
+    }
+    .btn-grupo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-grupo .btn {
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 250px;
+    }
+}
